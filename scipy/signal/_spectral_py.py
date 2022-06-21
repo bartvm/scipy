@@ -1488,7 +1488,7 @@ def istft(Zxx, fs=1.0, window='hann', nperseg=None, noverlap=None, nfft=None,
                 time_axis -= 1
             x = np.moveaxis(x, -1, time_axis)
 
-    time = np.arange(x.shape[0])/float(fs)
+    time = np.arange(x.shape[time_axis])/float(fs)
     return time, x
 
 
